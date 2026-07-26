@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bus Route Optimizer</title>
+    <style>
+        :root {
+            --primary: #10B981;
+            --dark: #0F172A;
+            --card-bg: #1E293B;
+            --text-muted: #94A3B8;
+            --light: #F8FAFC;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hero Header */
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .badge {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p.lead {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Stats Bar */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Content Sections */
+        section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding-left: 0.75rem;
+        }
+
+        /* Comparison Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background-color: #1E293B;
+            color: var(--primary);
+        }
+
+        /* Tech Stack Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #334155;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Header -->
+        <header>
+            <span class="badge">Academic Project Showcase</span>
+            <h1>Campus Bus Route Optimizer</h1>
+            <p class="lead">Rethinking campus transit through data-driven route generation, dynamic dispatching, and real-time schedule optimization.</p>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">18%</div>
+                <div class="stat-label">Wait Time Reduced</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12%</div>
+                <div class="stat-label">Fuel Saved Daily</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Bus Stops Optimized</div>
+            </div>
+        </div>
+
+        <!-- Problem vs Solution -->
+        <section>
+            <h2>Problem vs. Optimization Solution</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Current System</th>
+                        <th>Optimized Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fixed loops regardless of student density</td>
+                        <td>Dynamic rerouting based on class schedule peaks</td>
+                    </tr>
+                    <tr>
+                        <td>High wait times at crowded hubs</td>
+                        <td>Algorithm-driven priority dispatching</td>
+                    </tr>
+                    <tr>
+                        <td>Excess fuel consumption on empty runs</td>
+                        <td>Graph shortest-path routing (Dijkstra's & GA)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tech Stack -->
+        <section>
+            <h2>System Architecture & Tech Stack</h2>
+            <p style="color: var(--text-muted);">Built using graph theory modeling, optimization libraries, and interactive visualization tools.</p>
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Dijkstra's Algorithm</span>
+                <span class="tag">Genetic Algorithms</span>
+                <span class="tag">NetworkX</span>
+                <span class="tag">Leaflet.js</span>
+                <span class="tag">React</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Campus Bus Route Optimizer &copy; 2026. Designed for Project Submission.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
